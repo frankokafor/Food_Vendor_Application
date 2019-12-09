@@ -2,7 +2,8 @@
 
 Application Begins
 
-Get full application api documentation at localhost:8081/food_vendor/swagger-ui.html
+
+# Get full application api documentation at localhost:8081/food_vendor/swagger-ui.html
 
 1)Application Developed with springboot
 
@@ -10,7 +11,8 @@ Get full application api documentation at localhost:8081/food_vendor/swagger-ui.
 
 3)Rest end-point with authenticated urls
 
-APPLICATION WALK THROUGH
+
+# APPLICATION WALK THROUGH
 
 1)All created users are assigned with user role
 
