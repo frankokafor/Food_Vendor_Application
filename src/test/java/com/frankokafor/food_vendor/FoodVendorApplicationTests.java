@@ -1,4 +1,4 @@
-package com.frankokafor;
+package com.frankokafor.food_vendor;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
