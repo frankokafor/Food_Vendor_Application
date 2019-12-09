@@ -46,7 +46,6 @@ public class SwaggerConfiguration implements WebMvcConfigurer {
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("/profile_image/**")
-				// .addResourceLocations("file:/opt/profile_image/")
 				.addResourceLocations("file:///C:/enterprise_uploads/profile_image/").setCachePeriod(3600)
 				.resourceChain(true);
 		registry.addResourceHandler("swagger-ui.html").addResourceLocations("classpath:/META-INF/resources/");
