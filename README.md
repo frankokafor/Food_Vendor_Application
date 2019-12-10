@@ -31,5 +31,3 @@ Application Begins
 8)images can be uploaded for users, food and drinks.
 
 9)pay pal api implemented for online and card payments.
-
-10)
