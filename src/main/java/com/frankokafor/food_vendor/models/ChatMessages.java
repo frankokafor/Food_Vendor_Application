@@ -13,6 +13,9 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import lombok.Data;
+
+@Data
 @Entity
 @Table(name = "chat_message")
 public class ChatMessages {
@@ -41,45 +44,4 @@ public class ChatMessages {
 		this.sender = sender;
 		this.message = message;
 	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public Date getTime() {
-		return time;
-	}
-
-	public void setTime(Date time) {
-		this.time = time;
-	}
-
-	public UserEntity getSender() {
-		return sender;
-	}
-
-	public void setSender(UserEntity sender) {
-		this.sender = sender;
-	}
-
-	public String getType() {
-		return type;
-	}
-
-	public void setType(String type) {
-		this.type = type;
-	}
-
-	public String getMessage() {
-		return message;
-	}
-
-	public void setMessage(String message) {
-		this.message = message;
-	}
-
 }

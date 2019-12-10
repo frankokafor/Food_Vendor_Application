@@ -20,7 +20,9 @@ import javax.persistence.Table;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlTransient;
 
+import lombok.Data;
 
+@Data
 @Entity
 @Table(name = "roles")
 @NamedQueries({
@@ -50,41 +52,4 @@ public class Roles implements Serializable {
 
     public Roles() {
     }
-
-	public long getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getPrivelege() {
-		return privelege;
-	}
-
-	public void setPrivelege(String privelege) {
-		this.privelege = privelege;
-	}
-
-	public List<UserEntity> getUserDetails() {
-		return userDetails;
-	}
-	@XmlTransient
-	public void setUserDetails(List<UserEntity> userDetails) {
-		this.userDetails = userDetails;
-	}
-
-	public void setId(long id) {
-		this.id = id;
-	}
-
 }

@@ -19,11 +19,13 @@ import javax.persistence.TemporalType;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
+import lombok.Data;
+
 /**
  *
  * @author mac
  */
-
+@Data
 @Entity
 @Table(name = "notifications")
 @XmlRootElement
@@ -82,69 +84,4 @@ public class Notifications implements Serializable {
 		this.dateCreated = created;
 		this.readStatus = false;
 	}
-
-	public long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public Date getDateCreated() {
-		return dateCreated;
-	}
-
-	public void setDateCreated(Date dateCreated) {
-		this.dateCreated = dateCreated;
-	}
-
-	public String getMessage() {
-		return message;
-	}
-
-	public void setMessage(String message) {
-		this.message = message;
-	}
-
-	public Boolean getReadStatus() {
-		return readStatus;
-	}
-
-	public void setReadStatus(Boolean readStatus) {
-		this.readStatus = readStatus;
-	}
-
-	public String getType() {
-		return type;
-	}
-
-	public void setType(String type) {
-		this.type = type;
-	}
-
-	public Date getDateUpdated() {
-		return dateUpdated;
-	}
-
-	public void setDateUpdated(Date dateUpdated) {
-		this.dateUpdated = dateUpdated;
-	}
-
-	public String getUrl() {
-		return url;
-	}
-
-	public void setUrl(String url) {
-		this.url = url;
-	}
-
-	public UserEntity getUserDetails() {
-		return userDetails;
-	}
-
-	public void setUserDetails(UserEntity userDetails) {
-		this.userDetails = userDetails;
-	}
-
 }

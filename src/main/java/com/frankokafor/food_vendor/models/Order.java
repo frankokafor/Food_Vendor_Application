@@ -22,6 +22,9 @@ import javax.validation.constraints.Size;
 import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;
 
+import lombok.Data;
+
+@Data
 @Entity
 @Table(name = "orders")
 public class Order implements Serializable {
@@ -84,117 +87,4 @@ public class Order implements Serializable {
 	@ManyToMany
 	@LazyCollection(LazyCollectionOption.FALSE)
 	private List<Drinks> drinkList;
-
-	public long getId() {
-		return id;
-	}
-
-	public void setId(long id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public double getTotalAmount() {
-		return totalAmount;
-	}
-
-	public void setTotalAmount(double totalAmount) {
-		this.totalAmount = totalAmount;
-	}
-
-	public Date getDateCreated() {
-		return dateCreated;
-	}
-
-	public void setDateCreated(Date dateCreated) {
-		this.dateCreated = dateCreated;
-	}
-
-	public UserEntity getUserDetails() {
-		return userDetails;
-	}
-
-	public void setUserDetails(UserEntity userDetails) {
-		this.userDetails = userDetails;
-	}
-
-	public Date getDateEdited() {
-		return dateEdited;
-	}
-
-	public void setDateEdited(Date dateEdited) {
-		this.dateEdited = dateEdited;
-	}
-
-	public List<Food> getFoodList() {
-		return foodList;
-	}
-
-	public void setFoodList(List<Food> foodList) {
-		this.foodList = foodList;
-	}
-
-	public List<Drinks> getDrinkList() {
-		return drinkList;
-	}
-
-	public void setDrinkList(List<Drinks> drinkList) {
-		this.drinkList = drinkList;
-	}
-
-	public long getEditedBy() {
-		return editedBy;
-	}
-
-	public void setEditedBy(long editedBy) {
-		this.editedBy = editedBy;
-	}
-
-	public long getCreatedBy() {
-		return createdBy;
-	}
-
-	public void setCreatedBy(long createdBy) {
-		this.createdBy = createdBy;
-	}
-
-	public String getLocation() {
-		return location;
-	}
-
-	public String getPaymentType() {
-		return paymentType;
-	}
-
-	public void setPaymentType(String paymentType) {
-		this.paymentType = paymentType;
-	}
-
-	public void setLocation(String location) {
-		this.location = location;
-	}
-
-	public String getOrderedBy() {
-		return orderedBy;
-	}
-
-	public void setOrderedBy(String orderedBy) {
-		this.orderedBy = orderedBy;
-	}
-
-	public Boolean getPaymentStatus() {
-		return paymentStatus;
-	}
-
-	public void setPaymentStatus(Boolean paymentStatus) {
-		this.paymentStatus = paymentStatus;
-	}
-
 }

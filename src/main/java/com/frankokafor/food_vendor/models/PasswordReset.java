@@ -12,6 +12,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import lombok.Data;
+
+@Data
 @Entity
 @Table(name = "password_reset")
 public class PasswordReset implements Serializable {
@@ -28,29 +31,4 @@ public class PasswordReset implements Serializable {
 
 	@Column(nullable = false)
 	private String token;
-
-	public long getId() {
-		return Id;
-	}
-
-	public void setId(long id) {
-		Id = id;
-	}
-
-	public UserEntity getUserDetails() {
-		return userDetails;
-	}
-
-	public void setUserDetails(UserEntity userDetails) {
-		this.userDetails = userDetails;
-	}
-
-	public String getToken() {
-		return token;
-	}
-
-	public void setToken(String token) {
-		this.token = token;
-	}
-
 }
