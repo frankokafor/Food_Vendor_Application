@@ -52,7 +52,7 @@ public class OrderController {
 		return new ResponseEntity<>(service.userOrders(userId), HttpStatus.OK);
 	}
 	
-	@ApiOperation(value = "get all orders",notes = "append the user id to get all orders in the database")
+	@ApiOperation(value = "get all orders",notes = "get all orders in the database")
 	@GetMapping(path = ResourceUrls.ALL_ORDERS, produces = {MediaType.APPLICATION_JSON_VALUE })
 	public ResponseEntity getallOrders() {
 		return new ResponseEntity<>(service.allOrders(), HttpStatus.OK);

@@ -88,7 +88,7 @@ public class UserController {
 		return new ResponseEntity<>(service.requestPasswordResetToken(requestModel), HttpStatus.OK);
 	}
 	
-	@ApiOperation(value = "reset password",notes = "end point to reset forget password.include the password reset token")
+	@ApiOperation(value = "reset password",notes = "reset forget password.include the password reset token and the new passeord")
 	@PostMapping(path = ResourceUrls.PASSWORD_RESET, consumes = {MediaType.APPLICATION_JSON_VALUE })
 	public ResponseEntity passwordReset(@RequestBody PasswordResetModel requestModel) {
 		return new ResponseEntity<>(service.passwordReset(requestModel), HttpStatus.OK);
@@ -103,7 +103,7 @@ public class UserController {
 		return new ResponseEntity<>(service.uploadProfilePicture(file), HttpStatus.OK);
 	}
 	
-	@ApiOperation(value = "make a user an admin",notes = "send the userid in a list to make user an admin")
+	@ApiOperation(value = "make a user an admin",notes = "send list of userids to make users an admin")
 	@PostMapping(path = ResourceUrls.MAKE_USER_ADMIN, consumes = {MediaType.APPLICATION_JSON_VALUE })
 	public ResponseEntity makeAdmin(@RequestBody UserIdRequest request) {
 		return new ResponseEntity<>(service.makeAdmin(request), HttpStatus.ACCEPTED);
